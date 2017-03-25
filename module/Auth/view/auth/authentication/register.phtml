@@ -1,0 +1,29 @@
+<?php
+
+$title = "Sign in";
+$this->headTitle($title);
+
+$form->setAttribute('action', $this->url('auth', ['action' => 'register']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+
+echo isset($errorMessage) ? $errorMessage : null;
+
+
+echo $this->formRow($form->get('token'));
+echo $this->formRow($form->get('email'));
+echo $this->formRow($form->get('emailconfirm'));
+echo $this->formRow($form->get('password'));
+echo $this->formRow($form->get('passwordconfirm'));
+echo $this->formRow($form->get('firstname'));
+echo $this->formRow($form->get('surname'));
+echo $this->formRow($form->get('street'));
+echo $this->formRow($form->get('streetnumber'));
+echo $this->formRow($form->get('city'));
+echo $this->formRow($form->get('postcode'));
+echo $this->formRow($form->get('country'));
+echo $this->formRow($form->get('submit'));
+echo $this->form()->closeTag();
+
+?>

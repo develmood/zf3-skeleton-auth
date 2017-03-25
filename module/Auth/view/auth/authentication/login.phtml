@@ -1,0 +1,15 @@
+<?php
+
+$title = "Sign in";
+$this->headTitle($title);
+
+$form->setAttribute('action', $this->url('auth', ['action' => 'login']));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('email'));
+echo $this->formRow($form->get('password'));
+echo $this->formRow($form->get('submit'));
+echo $this->form()->closeTag();
+
+?>
